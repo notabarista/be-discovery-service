@@ -30,7 +30,7 @@ jobs:
          architecture: x64
          
       - name: Build with maven
-        run: mvn clean install
+        run: mvn dependency:tree clean install
       - name: Deploy artifacts
         run: mvn -batch-mode deploy
         env:
